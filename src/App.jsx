@@ -1,14 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import Card from './components/Card';
 
 function App() {
-  buttonList = buttons.map(text => { <Button variant='contained'>{text}</Button>})
+
+  const clickHandler = () => {
+    console.log('click!')
+  }
+
   return (
     <>
-    <Button variant='text'>Add Button</Button>
-    <Box>
-    {ButtonList}  
-    </Box> 
+    <section className='container' onClick={() => console.log('click!')}>
+      <Card clickHandler={clickHandler}/>
+    </section>
     </>
   );
 }
