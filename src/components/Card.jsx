@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react'
 
-const API = ''
+// const API = ''
 
-const Card = ({ clickHandler }) => {
+const Card = ({ clickHandler, color }) => {
+
+    // console.log(color)
+
 
     // useEffect(() => {
     //     fetch(API)
@@ -10,11 +13,10 @@ const Card = ({ clickHandler }) => {
     //     .then(setCount)
     // })
 
-    const [count, setCount] = useState()
   return (
     <section className="card">
-        <h2>Test</h2>
-        <button onClick={clickHandler}>Click me!</button>
+        <h2>{color}</h2>
+        <button onClick={() => clickHandler(color)}>Click me!</button>
         <p>I'm a card!</p>
 
     </section>
